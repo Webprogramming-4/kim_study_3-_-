@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>텍스트 변경하기</title>
+<style>
+  body { text-align:center; font-family:sans-serif; margin-top:50px; }
+  button { padding:10px 20px; background:skyblue; border:none; border-radius:5px; cursor:pointer; }
+</style>
+</head>
+<body>
+  <h2 id="title">안녕하세요</h2>
+  <button id="changeBtn">문구 바꾸기</button>
+
+  <script>
+    const title = document.getElementById("title");
+    const button = document.getElementById("changeBtn");
+
+    button.addEventListener("click", function() {
+      title.textContent = "DOM 조작 성공";
+    });
+  </script>
+</body>
+</html>
