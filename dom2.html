@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>배경색 바꾸기</title>
+<style>
+  body { text-align:center; font-family:sans-serif; margin-top:80px; transition:background-color 0.5s; }
+  button { padding:12px 20px; background:lightcoral; color:white; border:none; border-radius:6px; cursor:pointer; }
+</style>
+</head>
+<body>
+  <h2>버튼을 눌러 배경색을 바꿔봐 </h2>
+  <button id="colorBtn">색 바꾸기</button>
+
+  <script>
+    const button = document.getElementById("colorBtn");
+
+    button.addEventListener("click", function() {
+      // 랜덤 색상 생성
+      const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+      document.body.style.backgroundColor = randomColor;
+    });
+  </script>
+</body>
+</html>
