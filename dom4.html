@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>입력값 표시하기</title>
+<style>
+  body { font-family:sans-serif; text-align:center; margin-top:70px; }
+  input, button { padding:8px 10px; font-size:15px; }
+  p { margin-top:20px; font-size:18px; }
+</style>
+</head>
+<body>
+  <h2>이름을 입력해보세요!</h2>
+  <input id="nameInput" placeholder="이름 입력">
+  <button id="showBtn">확인</button>
+  <p id="result"></p>
+
+  <script>
+    const input = document.getElementById("nameInput");
+    const button = document.getElementById("showBtn");
+    const result = document.getElementById("result");
+
+    button.addEventListener("click", function() {
+      result.textContent = `안녕하세요, ${input.value}님!`;
+    });
+  </script>
+</body>
+</html>
